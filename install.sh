@@ -28,9 +28,9 @@ install() {
   chmod 777 /opt/ServerStatus/
 
   echo -e "下载ServerStatus"
-  wget -O ServerStatus_linux_${os_arch} https://github.com/bianzhifu/ServerStatus/releases/download/v1.0.0/ServerStatus_linux_${os_arch} >/dev/null 2>&1
+  wget -O ServerStatus_linux_${os_arch} https://github.com/bianzhifu/ServerStatus/releases/latest/download/ServerStatus_linux_${os_arch} >/dev/null 2>&1
   if [[ $? != 0 ]]; then
-    echo -e "${red}下载失败,https://github.com/bianzhifu/ServerStatus/releases/download/v1.0.0/ServerStatus_linux_${os_arch}"
+    echo -e "${red}下载失败,https://github.com/bianzhifu/ServerStatus/releases/latest/download/ServerStatus_linux_${os_arch}"
     return 0
   fi
   mv ServerStatus_linux_${os_arch} /opt/ServerStatus/ServerStatus
